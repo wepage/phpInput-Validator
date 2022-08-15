@@ -1,0 +1,15 @@
+// Your code here!
+$var = "''; DROP ALL TABLES; COMMIT; ''";
+
+
+function validateInput($var) {
+$var=stripslashes($var);
+$var=htmlentities($var);
+$var=strip_tags($var);
+### mysqli_real_escape_string($connection, $var);
+#$var=mysql_real_escape_string($var); 
+return $var;
+}
+
+$input = validateInput($var);
+echo $input;
